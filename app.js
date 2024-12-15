@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import {
   getBills,
   getBill,
@@ -8,6 +9,7 @@ import {
 
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 function setCorsHeaders(req, res, next) {
   res.setHeader("Access-Control-Allow-Origin", "*");
