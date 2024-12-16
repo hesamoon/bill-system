@@ -1,4 +1,5 @@
 import express from "express";
+import dotenv from "dotenv";
 import cors from "cors";
 import {
   getBills,
@@ -6,6 +7,8 @@ import {
   createBill,
   initializeDatabase,
 } from "./database.js";
+
+dotenv.config();
 
 const app = express();
 app.use(express.json());
