@@ -12,7 +12,7 @@ dotenv.config();
 //   })
 //   .promise();
 const pool = mysql
-  .createConnection(
+  .createPool(
     `mysql://${process.env.MYSQLUSER}:${process.env.MYSQLPASSWORD}@${process.env.MYSQLHOST}:${process.env.MYSQLPORT}/${process.env.MYSQLDATABASE}
   `
   )
